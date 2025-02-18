@@ -9,7 +9,7 @@ int main(){
         rem = n%2;
         n/=2;
         result += rem*i;
-        i*10;
+        i*=10;
     }
     printf("%lld",result);
 }
