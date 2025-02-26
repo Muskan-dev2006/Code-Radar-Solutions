@@ -6,6 +6,9 @@ int main(){
     int arr[n];
     int count = 0 ;
     int count_2=0;
+    if(n==1){
+        printf("YES");
+    }
     for(int i=0; i<n; i++){
         scanf("%d",&arr[i]);
     }
