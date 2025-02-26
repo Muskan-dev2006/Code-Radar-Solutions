@@ -21,7 +21,7 @@ int main(){
     if(count == n-2){
         printf("YES");
     }
-    else if(count_2 == n-2){
+    else if(count_2 = n-2){
         printf("YES");
     }
     else{
