@@ -9,7 +9,7 @@ int main(){
     for(int i=0; i<n; i++){
         scanf("%d",&arr[i]);
     }
-    for(int i=1;i<n-1;i++){
+    for(int i=1;i<n;i++){
         if (arr[i-1]<=arr[i] && arr[i]<=arr[i+1]){
             count +=1;
         }
@@ -21,7 +21,7 @@ int main(){
     if(count == n-2){
         printf("YES");
     }
-    else if(count_2 = n-2){
+    else if(count_2 == n-2){
         printf("YES");
     }
     else{
