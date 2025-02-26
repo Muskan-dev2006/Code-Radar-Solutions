@@ -1,11 +1,11 @@
 // Your code here...
 #include <stdio.h>
-int printArray(int arr, int n){
+void printArray(int arr[], int n){
     for(int i=0; i<n;i++){
         printf("%d",arr[i]);
     }
 }
-int bubbleSort(int arr,int n){
+void bubbleSort(int arr[],int n){
     int c;
     for(int i=0; i<n;i++){
         for(int j=0;j<n-i-1;j++){
