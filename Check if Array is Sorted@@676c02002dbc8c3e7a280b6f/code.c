@@ -19,6 +19,7 @@ int main(){
     }
     else if(count == n-2){
         printf("Sorted");
+    }
     else{
         printf("Not Sorted");
     }
