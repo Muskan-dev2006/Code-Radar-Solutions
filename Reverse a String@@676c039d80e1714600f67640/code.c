@@ -1,6 +1,6 @@
 // Your code here...
 #include <stdio.h>
-#include <strings.h>
+#include <string.h>
 
 int main(){
     char str[100];
