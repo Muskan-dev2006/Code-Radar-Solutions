@@ -8,10 +8,10 @@ int checkpalindrome(char str, int i , int j){
             j--;
         }
         else{
-            return false;
+            return 0;
         }
     }
-    return true;
+    return 1;
 }
 
 int main(){
@@ -19,7 +19,8 @@ int main(){
     scanf("%s",&str);
     int i = 0;
     int j = strlen(str) - 1;
-    if(checkpalindrome(str,i,j)){
+    int palindrome = checkpalindrome(str,i,j);
+    if(palindrome){
         printf("Yes");
     }
     else{
