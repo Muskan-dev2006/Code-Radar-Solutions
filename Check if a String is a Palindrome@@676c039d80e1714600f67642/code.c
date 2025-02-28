@@ -1,7 +1,7 @@
 // Your code here...
 #include <stdio.h>
 #include <string.h>
-bool checkpalindrome(char str, int i , int j){
+int checkpalindrome(char str, int i , int j){
     while(i<=j){
         if(str[i] == str[j]){
             i++;
