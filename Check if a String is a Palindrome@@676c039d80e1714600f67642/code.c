@@ -7,7 +7,7 @@ int main(){
     scanf("%s",&str);
     int i = 0;
     int j = strlen(str) - 1;
-    int palindrome = checkpalindrome(str,i,j);
+    int palindrome = checkpalindrome(str[],i,j);
     if(palindrome){
         printf("Yes");
     }
