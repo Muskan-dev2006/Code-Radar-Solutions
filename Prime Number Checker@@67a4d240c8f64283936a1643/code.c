@@ -1,5 +1,5 @@
 
-int isprime(int a){
+int isPrime(int a){
     int is_prime=0;
     if(a==0 || a==1){
         is_prime =1;
