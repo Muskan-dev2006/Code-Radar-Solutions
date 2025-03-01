@@ -3,7 +3,7 @@
 #include <string.h>
 int main(){
     char str[100];
-    getline(str);
+    fgets(str, sizeof(str), stdin); 
     scanf("%s",str);
     printf("%d",strlen(str));
 }
