@@ -12,6 +12,8 @@ void fibonacciSeries(int n){
     else if (n>=2){
         for(int i = 0; i<n;i++){
             c = a + b;
+            a=b;
+            b=c;
             printf("%d ",c);
         }
     }
