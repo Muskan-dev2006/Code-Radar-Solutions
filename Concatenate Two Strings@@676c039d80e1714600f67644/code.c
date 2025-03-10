@@ -7,5 +7,5 @@ int main(){
     char str2[100];
     fgets(str2, sizeof(str2), stdin);
     strcat(str1,str2);
-    printf("%s",str1);
+    printf("%s\n",str1);
 }
