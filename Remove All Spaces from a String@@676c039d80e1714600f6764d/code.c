@@ -7,7 +7,7 @@ int main(){
     int n = strlen(str);
     for(int i=0; i<n;i++){
         if(str[i]=' '){
-            str[i]='';
+            str[i]="";
         }
     }
     printf("%s",str);
