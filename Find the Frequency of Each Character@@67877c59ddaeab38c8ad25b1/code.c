@@ -11,6 +11,7 @@ int main(){
                 count +=1;
             }
         }
-        printf("%c: %d",str[i],count);
+        printf("%c: %d\n",str[i],count);
+        count =0
     }
 }
