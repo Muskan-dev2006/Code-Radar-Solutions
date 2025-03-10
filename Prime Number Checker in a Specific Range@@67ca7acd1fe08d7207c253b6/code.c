@@ -1,6 +1,9 @@
 // Your code here...
 int isPrime(int a){
     int is_prime=1;
+    if(a<0){
+        is_prime = 0;
+    }
     if(a==0 || a==1){
         is_prime =0;
     }
