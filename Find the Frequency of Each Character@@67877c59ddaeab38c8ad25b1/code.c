@@ -12,6 +12,6 @@ int main(){
             }
         }
         printf("%c: %d\n",str[i],count);
-        count =0
+        count =0;
     }
 }
