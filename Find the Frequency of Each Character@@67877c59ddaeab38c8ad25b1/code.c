@@ -11,6 +11,6 @@ int main(){
                 count +=1;
             }
         }
-        printf("%s: %d",str[i],count);
+        printf("%c: %d",str[i],count);
     }
 }
