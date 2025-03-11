@@ -30,7 +30,7 @@ int main(){
     int n = strlen(str);
     int m=0;
     int j = n-1;
-    removespaces(str,n);
+    removespaces(str);
     int palindrome = checkpalindrome(str,m,j)
     if (palindrome){
         printf("Yes");
