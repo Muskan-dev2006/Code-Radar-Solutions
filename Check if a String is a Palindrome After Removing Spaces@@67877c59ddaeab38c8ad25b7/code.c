@@ -18,7 +18,7 @@ void removespaces(char str[]) {
 
     for(int i = 0; i < n; i++) {
         if(str[i] != ' ') {
-            str[index++] = str[i];
+            str[index++] = tolower(str[i]);
         }
     }
     str[index] = '\0';  
