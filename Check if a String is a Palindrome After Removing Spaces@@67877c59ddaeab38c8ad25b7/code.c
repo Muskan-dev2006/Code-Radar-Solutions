@@ -27,6 +27,9 @@ int main(){
             n--; 
             i--;
         }
+        else{
+            return;
+        }
     }
     int palindrome = checkpalindrome(str,m,j)
     if (palindrome){
