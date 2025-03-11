@@ -26,10 +26,10 @@ int main(){
     char str[100];
     fgets(str, sizeof(str), stdin);
     str[strcspn(str, "\n")] = '\0';
+    removespaces(str);
     int n = strlen(str);
     int m=0;
     int j = n-1;
-    removespaces(str);
     int palindrome = checkpalindrome(str,m,j);
     if (palindrome){
         printf("Yes");
