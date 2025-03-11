@@ -13,17 +13,16 @@ int checkpalindrome(char str[], int m , int j){
     }
     return 1;
 }
-char removespaces(char str[],int n){
-    for(int i=0; i<n;i++){
-        if(str[i]==' '){
-            for (int j = i; j < n; j++) {
-                str[j] = str[j + 1];
-            }
-            n--; 
-            i--;
+void removespaces(char str[]) {
+    int n = strlen(str);
+    int index = 0;
+
+    for(int i = 0; i < n; i++) {
+        if(str[i] != ' ') {
+            str[index++] = str[i];
         }
     }
-    return str;
+    str[index] = '\0';  
 }
 int main(){
     char str[100];
