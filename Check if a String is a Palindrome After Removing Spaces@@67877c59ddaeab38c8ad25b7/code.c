@@ -27,6 +27,7 @@ void removespaces(char str[]) {
 int main(){
     char str[100];
     fgets(str, sizeof(str), stdin);
+    str[strcspn(str, "\n")] = '\0';
     int n = strlen(str);
     int m=0;
     int j = n-1;
