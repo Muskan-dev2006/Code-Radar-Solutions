@@ -31,7 +31,7 @@ int main(){
     int m=0;
     int j = n-1;
     removespaces(str);
-    int palindrome = checkpalindrome(str,m,j)
+    int palindrome = checkpalindrome(str,m,j);
     if (palindrome){
         printf("Yes");
     }
