@@ -3,13 +3,11 @@
 #include<string.h>
 int checkpalindrome(char str[], int m , int j){
     while(m<=j){
-        if(str[m] == str[j]){
-            m++;
-            j--;
-        }
-        else{
+        if (str[m] != str[j]) {
             return 0;
         }
+        m++;
+        j--;
     }
     return 1;
 }
