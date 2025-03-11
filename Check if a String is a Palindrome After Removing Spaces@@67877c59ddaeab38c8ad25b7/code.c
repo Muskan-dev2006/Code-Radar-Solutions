@@ -1,6 +1,7 @@
 // Your code here...
 #include<stdio.h>
 #include<string.h>
+#include <ctype.h>
 int checkpalindrome(char str[], int m , int j){
     while(m<=j){
         if (str[m] != str[j]) {
