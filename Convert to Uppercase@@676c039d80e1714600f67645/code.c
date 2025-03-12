@@ -8,7 +8,7 @@ int main(){
     int index = 0;
     char str1[100]="";
     for(int i=0; i<strlen(str);i++){
-        char ch = tolower(str[i]);
+        char ch = toupper(str[i]);
         if (ch != '\n') {  
             str1[index++] = ch;
         }
