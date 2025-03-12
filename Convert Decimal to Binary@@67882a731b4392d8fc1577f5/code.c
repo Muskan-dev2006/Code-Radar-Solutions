@@ -5,7 +5,6 @@ int main(){
     scanf("%d", &num);
     if (num == 0) {
         printf("0");
-        return;
     }
 
     int binary[32];  
