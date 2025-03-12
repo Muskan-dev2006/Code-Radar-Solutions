@@ -1,15 +1,24 @@
 // Your code here...
 #include <stdio.h>
 int main(){
-    long long n;
-    scanf("%d",&n);
-    int  rem, i =1;
-    long long result = 0;
-    while(n!=0){
-        rem = n%2;
-        n/=2;
-        result += rem*i;
-        i*=10;
+    int num;
+    scanf("%d", &num);
+    if (num == 0) {
+        printf("0");
+        return;
     }
-    printf("%lld",result);
+
+    int binary[32];  
+    int i = 0;
+
+    while (num > 0) {
+        binary[i] = num % 2;  
+        num = num / 2;
+        i++;
+    }
+
+    printf("Binary: ");
+    for (int j = i - 1; j >= 0; j--) {
+        printf("%d", binary[j]);
+    }
 }
