@@ -22,7 +22,7 @@ bool checkPangram(char *s) {
 int main(){
     char s[100];
     scanf("%s",s);
-    if(checkPangram){
+    if(checkPangram(s)){
         printf("Yes");
     }
     else{
