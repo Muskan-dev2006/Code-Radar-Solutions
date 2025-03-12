@@ -8,7 +8,10 @@ int main(){
     char str1[100]="";
     for(int i=0; i<strlen(str);i++){
         char ch = tolower(str[i]);
-        strcat(str1, &ch); 
+        if (ch != '\n') {  
+            str1[index++] = ch;
+        }
+        str1[index] = '\0';
     }
     printf("%s",str1);
 }
