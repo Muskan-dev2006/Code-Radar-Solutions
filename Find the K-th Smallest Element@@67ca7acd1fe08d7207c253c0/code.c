@@ -13,7 +13,7 @@ void sortedarray(int arr[],int n){
 }
 int kthSmallest(int arr[],int n,int k){
     sortedarray(arr,n);
-    if (k<n){
+    if (k<=n){
         return arr[k-1];
     }
     else{
