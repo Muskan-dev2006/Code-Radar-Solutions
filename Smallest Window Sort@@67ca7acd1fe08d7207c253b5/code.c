@@ -10,8 +10,8 @@ int findUnsortedSubarray(int arr[],int n){
     }
     for(int i=0; i<n;i++){
         if(i==0){
-            Min = min(Min,arr[i]);
-            Max = max(Max,arr[i]);
+            Min = fmin(Min,arr[i]);
+            Max = fmax(Max,arr[i]);
         }
         if(i==n-1){
             Min = min(Min,arr[i]);
