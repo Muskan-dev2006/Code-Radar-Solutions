@@ -14,13 +14,13 @@ int findUnsortedSubarray(int arr[],int n){
             Max = fmax(Max,arr[i]);
         }
         if(i==n-1){
-            Min = min(Min,arr[i]);
-            Max = max(Max,arr[i]);
+            Min = fmin(Min,arr[i]);
+            Max = fmax(Max,arr[i]);
         }
         else{
             if(arr[i]>arr[i+1]|| arr[i]<arr[i-1]){
-                Min = min(Min,arr[i]);
-                Max = max(Max,arr[i]);
+                Min = fmin(Min,arr[i]);
+                Max = fmax(Max,arr[i]);
             }
         }
     }
