@@ -4,6 +4,14 @@
 #include <limits.h>
 
 int findUnsortedSubarray(int arr[],int n){
+    int myMin(int a, int b) {
+        return (a < b) ? a : b;
+    }
+
+    int myMax(int a, int b) {
+        return (a > b) ? a : b;
+    }
+
     int Min = INT_MAX;
     int Max = INT_MIN;
     if(n==1){
@@ -12,8 +20,8 @@ int findUnsortedSubarray(int arr[],int n){
     for(int i=1; i<n-1;i++){
 
         if(arr[i]>arr[i+1]|| arr[i]<arr[i-1]){
-            Min = fmin(Min,arr[i]);
-            Max = fmax(Max,arr[i]);
+            Min = myMin(Min,arr[i]);
+            Max = myMax(Max,arr[i]);
         }
     }
     if (Min == INT_MAX) {
