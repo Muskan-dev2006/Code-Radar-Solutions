@@ -2,7 +2,7 @@
 #include <stdio.h>
 int palindrome(int arr[],int n){
     int count = 0;
-    int rev = 0;
+    int rev =0;
     for(int i=0; i<n; i++){
         int num = arr[i];
         while(num>0){
@@ -10,7 +10,7 @@ int palindrome(int arr[],int n){
             rev = rev*10 + dig;
             num = num/10;
         }
-        if(rev==n){
+        if(rev==arr[i]){
             count ++;
         }
 
