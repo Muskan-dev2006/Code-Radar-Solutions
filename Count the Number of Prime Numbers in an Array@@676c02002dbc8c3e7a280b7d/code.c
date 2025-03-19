@@ -12,13 +12,14 @@ int primenum(int arr[],int n){
                 flag=0;
                 break;
             }
-            if(flag==1){
-                count +=1;
-            }
         }
-        return count;
+        if (flag==1){
+            count +=1;
+        }
+        
 
     }
+    return count;
 }
 int main(){
     int n;
