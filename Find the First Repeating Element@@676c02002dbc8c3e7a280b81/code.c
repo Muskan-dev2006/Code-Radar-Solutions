@@ -19,7 +19,7 @@ int main(){
             printf("%d",arr[i]);
             break;
         }
-        else if(count == 1){
+        else{
             printf("%d",-1);
         }
         count = 0;
