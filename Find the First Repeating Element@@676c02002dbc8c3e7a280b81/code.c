@@ -14,12 +14,16 @@ int main(){
                 count +=1;
             }
         }
+
         if (count > 1){
             printf("%d",arr[i]);
             break;
         }
+        if(count == 1){
+            printf("%d",-1);
+        }
+        count = 0;
+
     }
-    if(count == 1){
-        printf("%d",-1);
-    }
+    
 }
