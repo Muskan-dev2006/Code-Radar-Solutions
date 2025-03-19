@@ -1,4 +1,5 @@
 // Your code here...
+#include <stdio.h>
 int primenum(int arr[],int n){
     int flag=1;
     int count = 0;
