@@ -1,13 +1,13 @@
 // Your code here...
 #include <stdio.h>
 int primenum(int arr[],int n){
-    int flag=1;
     int count = 0;
     for(int i=0;i<n;i++){
+        int flag = 1;
         if (arr[i]==0 || arr[i]==1){
             flag = 0;
         }
-        for(int j=2;j<arr[i];j++){
+        for(int j=2;j*j<=arr[i];j++){
             if(arr[i]%j==0){
                 flag=0;
                 break;
