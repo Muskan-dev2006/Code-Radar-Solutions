@@ -7,7 +7,7 @@ int primenum(int arr[],int n){
         if (arr[i]==0 || arr[i]==1){
             flag = 0;
         }
-        for(int j=2;j<arr[i];i++){
+        for(int j=2;j<arr[i];j++){
             if(arr[i]%j==0){
                 flag=0;
                 break;
