@@ -13,6 +13,7 @@ int palindrome(int arr[],int n){
         if(rev==arr[i]){
             count +=1;
         }
+        rev = 0;
 
     }
     return count;
