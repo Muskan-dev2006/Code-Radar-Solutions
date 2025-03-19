@@ -11,7 +11,7 @@ int palindrome(int arr[],int n){
             num = num/10;
         }
         if(rev==n){
-            count +=1;
+            count ++;
         }
 
     }
