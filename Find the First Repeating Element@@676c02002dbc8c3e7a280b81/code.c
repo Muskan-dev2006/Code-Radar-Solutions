@@ -18,5 +18,8 @@ int main(){
             printf("%d",arr[i]);
             break;
         }
+        else if(count == 1){
+            printf("%d",-1);
+        }
     }
 }
