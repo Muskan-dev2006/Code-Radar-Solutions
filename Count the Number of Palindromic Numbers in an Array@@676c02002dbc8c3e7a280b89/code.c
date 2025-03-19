@@ -10,9 +10,9 @@ int palindrome(int arr[],int n){
             rev = rev*10 + dig;
             num = num/10;
         }
-        if(rev==arr[i]){
-            count ++;
-        }
+    if(rev==arr[i]){
+        count +=1;
+    }
 
     }
     return count;
