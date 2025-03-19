@@ -1,5 +1,6 @@
 // Your code here...
 #include <stdio.h>
+#include <stdlib.h>
 int main(){
     int n;
     scanf("%d",&n);
@@ -9,7 +10,7 @@ int main(){
     }
     for(int i=0; i<n;i++){
         int s=0;
-        int j = arr[i];
+        int j = abs(arr[i]);
         while(j>0){
             int dig = j%10;
             s = s+dig;
