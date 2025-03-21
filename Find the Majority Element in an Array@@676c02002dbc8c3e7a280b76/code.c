@@ -18,7 +18,8 @@ int main(){
             }
         }
         if(bigcount==count){
-            return -1;
+            printf("%d",-1);
+            return 0;
 
         }
         else if(count>bigcount){
