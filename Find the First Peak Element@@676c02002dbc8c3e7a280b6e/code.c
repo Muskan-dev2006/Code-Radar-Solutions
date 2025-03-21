@@ -10,6 +10,7 @@ int findFirstPeak(int arr[], int n) {
             break;
         }
     }
+    if (isAllSame) return -1; 
     if (n == 1) return arr[0]; 
 
     if (arr[0] >= arr[1]) return arr[0]; 
