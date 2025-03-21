@@ -9,12 +9,10 @@ int main(){
     }
     if (n == 1) {
         printf("%d", arr[0]); 
-        return;
     }
     
     if (arr[0] >= arr[1]) {
         printf("%d", arr[0]);
-        return;
     }
     
     if (arr[n - 1] >= arr[n - 2]) {
@@ -27,6 +25,6 @@ int main(){
         }
     
     }
-    
+
     
 }
