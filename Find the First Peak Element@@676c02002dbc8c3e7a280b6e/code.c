@@ -2,6 +2,14 @@
 #include <stdio.h>
 
 int findFirstPeak(int arr[], int n) {
+    int isAllSame = 1;
+
+    for (int i = 1; i < n; i++) {
+        if (arr[i] != arr[i - 1]) {
+            isAllSame = 0;
+            break;
+        }
+    }
     if (n == 1) return arr[0]; 
 
     if (arr[0] >= arr[1]) return arr[0]; 
