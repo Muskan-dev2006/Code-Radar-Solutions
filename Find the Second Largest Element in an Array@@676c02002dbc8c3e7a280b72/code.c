@@ -7,6 +7,17 @@ int main(){
     for(int i=0; i<n; i++){
         scanf("%d",&arr[i]);
     }
+    int isAllSame = 1;
+
+    for (int i = 1; i < n; i++) {
+        if (arr[i] != arr[i - 1]) {
+            isAllSame = 0;
+            break;
+        }
+    }
+    
+    if (isAllSame) return -1;
+    if(n==1) return -1;
     for(int i=0; i<n-1; i++){
         int c;
         for(int j=0; j<n-i-1;j++){
