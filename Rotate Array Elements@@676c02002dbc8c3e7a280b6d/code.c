@@ -10,7 +10,7 @@ int main(){
     int k;
     scanf("%d",&k);
     int v[n];
-    for(int i=0; i<n;i++){
+    for(int i=0; i<k;i++){
         v[i] = arr[n-k+i];
     }
     for(int i=k; i<n;i++){
