@@ -16,5 +16,7 @@ int main(){
     for(int i=k; i<n;i++){
         v[i] = arr[i-k];
     }
-    printf("%d\n",v[i]);
+    for(int i=0; i<n; i++){
+        printf("%d\n",v[i]);
+    }
 }
