@@ -12,7 +12,7 @@ int findFirstPeak(int arr[], int n) {
         }
     }
 
-    return arr[n - 1]; 
+    return -1; 
 }
 
 int main() {
