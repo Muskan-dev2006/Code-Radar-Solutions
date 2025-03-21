@@ -17,8 +17,7 @@ int findFirstPeak(int arr[], int n) {
         }
     }
     if (arr[n-1]>arr[n-2]){
-        printf("%d",arr[n-1]);
-        return;
+        return arr[n-1];
     }
 
     return -1; 
