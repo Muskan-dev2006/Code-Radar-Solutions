@@ -17,12 +17,12 @@ int main(){
                 count +=1;
             }
         }
-        if(count>bigcount){
+        if(bigcount==count){
+            printf("%d",-1);
+        }
+        else if(count>bigcount){
             bigcount = count ;
             value = arr[i];
-        }
-        else if(bigcount==count){
-            printf("%d",-1);
         }
     }
     printf("%d",value);
