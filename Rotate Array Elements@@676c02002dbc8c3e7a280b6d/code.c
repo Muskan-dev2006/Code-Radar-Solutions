@@ -11,7 +11,7 @@ int main(){
     scanf("%d",&k);
     int v[n];
     for(int i=0; i<n;i++){
-        v[i] = arr[n-i-1];
+        v[i] = arr[n-k+i];
     }
     for(int i=k; i<n;i++){
         v[i] = arr[i-k];
