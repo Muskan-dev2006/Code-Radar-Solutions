@@ -10,14 +10,14 @@ int main(){
     int sum[n];
     for(int i=0;i<n;i++){
         if(i==0){
-            sum[i]==arr[i];
+            arr[i]=arr[i];
         }
         else if(i>0){
-            sum[i] = sum[i] + arr[i];
+            arr[i] = arr[i] + arr[i-1];
         }
     }
     for(int i=0;i<n;i++){
-        printf("%d",sum[i]);
+        printf("%d",arr[i]);
     }
 
 }
