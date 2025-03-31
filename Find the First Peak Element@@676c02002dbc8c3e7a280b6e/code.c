@@ -27,6 +27,7 @@ int findpeak(int arr[],int n){
     if(arr[n-1]>arr[n-2]){
         return arr[n-1];
     }
+    return -1;
 }
 int main(){
     int n;
