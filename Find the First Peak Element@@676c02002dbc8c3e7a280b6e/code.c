@@ -1,16 +1,7 @@
 // Your code here...
 #include <stdio.h>
 int findpeak(int arr[],int n){
-    int allsame = 1;
-    for(int i=0; i<n;i++){
-        if(arr[i]!=arr[i+1]){
-            allsame = 0;
-            break;
-        }
-    }
-    if(allsame){
-        return -1;
-    }
+    
     if(n==1){
         return arr[0];
     }
