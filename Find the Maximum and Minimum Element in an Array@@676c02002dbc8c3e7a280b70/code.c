@@ -1,4 +1,4 @@
-// Your code here...
+Loading Code...
 #include <stdio.h>
 #include <limits.h>
 int main(){
@@ -10,13 +10,13 @@ int main(){
     }
     int min = INT_MAX;
     int max = INT_MIN;
-    for(int i=0; i<n;i++){
+    for(int i=0;i<n;i++){
         if(arr[i]<min){
             min = arr[i];
         }
-        else if(arr[i]>max){
+        else if (arr[i]>max){
             max = arr[i];
         }
     }
-    printf("%d %d",min,max);
+    printf("%d %d",min max);
 }
