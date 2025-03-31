@@ -7,6 +7,10 @@ int main(){
     for(int i=0; i<n; i++){
         scanf("%d",&arr[i]);
     }
+    if(n==1){
+        printf("%d",-1);
+        return 0;
+    }
     int Allsame = 1;
     for(int i=0; i<n; i++){
         if(arr[i]!=arr[i+1]){
