@@ -11,12 +11,9 @@ int main(){
         int count = 1;
         for(int j=1;j<n;j++){
             if(arr[i]==arr[j]){
-                count +=1;
+                printf("%d",arr[i]);
                 break;
             }
-        }
-        if(count>1){
-            printf("%d",arr[i]);
         }
 
     }
