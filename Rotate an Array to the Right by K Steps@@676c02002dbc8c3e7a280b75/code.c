@@ -14,7 +14,12 @@ int main(){
         v[i] = arr[n-k+i];
     }
     for(int i=k;i<n;i++){
-        v[i] = arr[i-k];
+        if(i>k){
+            v[i] = arr[i-k];
+        }
+        else if(k>i){
+            v[i] = arr[k-i];
+        }
     }
     for(int i=0;i<n;i++){
         printf("%d ",v[i]);
