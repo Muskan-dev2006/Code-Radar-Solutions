@@ -17,7 +17,7 @@ int main(){
         if(i>k){
             v[i] = arr[i-k];
         }
-        else if(k>i){
+        else{
             v[i] = arr[k-i];
         }
     }
