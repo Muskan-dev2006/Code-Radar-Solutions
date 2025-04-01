@@ -24,5 +24,7 @@ int main(){
     for(int i=0; i<n;i++){
         scanf("%d",&arr[i]);
     }
-    findmissing(arr,n);
+    int small = findmissing(arr,n);
+    printf("%d",small);
+
 }
