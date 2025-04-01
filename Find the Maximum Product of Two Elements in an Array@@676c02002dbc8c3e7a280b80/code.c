@@ -25,7 +25,7 @@ int main(){
         }
         int maxproduct = max1*max2;
         int minproduct = min1*min2;
+        int result = (maxproduct > minproduct) ? maxproduct : minproduct;
     }
-    int result = (maxproduct > minproduct) ? maxproduct : minproduct;
     printf("%d",result);
 }
