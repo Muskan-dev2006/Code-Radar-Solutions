@@ -1,31 +1,20 @@
 // Your code here...
-#include <stdio.h>
-
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    int scores[1000];
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &scores[i]);
-    }
-
-    int max = scores[0];
-    int min = scores[0];
-    int max_breaks = 0;
-    int min_breaks = 0;
+void trackScores(int scores[], int n, int result[]) {
+    int highest = scores[0];
+    int lowest = scores[0];
+    int highBreaks = 0;
+    int lowBreaks = 0;
 
     for (int i = 1; i < n; i++) {
-        if (scores[i] > max) {
-            max = scores[i];
-            max_breaks++;
-        } else if (scores[i] < min) {
-            min = scores[i];
-            min_breaks++;
+        if (scores[i] > highest) {
+            highest = scores[i];
+            highBreaks++;
+        } else if (scores[i] < lowest) {
+            lowest = scores[i];
+            lowBreaks++;
         }
     }
 
-    printf("%d %d\n", max_breaks, min_breaks);
-
-    return 0;
+    result[0] = highBreaks;
+    result[1] = lowBreaks;
 }
