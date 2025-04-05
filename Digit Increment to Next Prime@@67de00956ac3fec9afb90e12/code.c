@@ -6,10 +6,13 @@ int nextPrimeDigit(int digit) {
     else if (digit < 3) return 3;
     else if (digit < 5) return 5;
     else if (digit < 7) return 7;
-    else return 2;  // wrap around
+    else return 2;  
 }
 
 int incrementToPrimeDigits(int n) {
+    if(n==0){
+        return 2;
+    }
     int digits[20];
     int len = 0;
 
