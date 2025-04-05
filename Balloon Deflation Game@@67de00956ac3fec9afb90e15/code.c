@@ -30,15 +30,3 @@ void deflateBalloons(int air[], int n) {
     }
 }
 
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    int air[1000];
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &air[i]);
-    }
-
-    deflateBalloons(air, n);
-    return 0;
-}
