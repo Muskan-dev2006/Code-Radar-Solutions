@@ -12,13 +12,18 @@ int main(){
     int min = INT_MAX;
     int min1 = 0;
     int min2 = 0;
-    for(int i=0; i<n;i++){
-        for(int j=i+1; j<n;j++){
-            int diff = abs(arr[i]-arr[j]);
-            if((diff < min || (diff == min && (arr[i] > arr[j] ? arr[j] : arr[i]) < min1))){
-                min = diff;
-                min1 = arr[i];
-                min2 = arr[j];
+    if(n==1){
+        printf("-1");
+    }
+    else{
+        for(int i=0; i<n;i++){
+            for(int j=i+1; j<n;j++){
+                int diff = abs(arr[i]-arr[j]);
+                if((diff < min || (diff == min && (arr[i] > arr[j] ? arr[j] : arr[i]) < min1))){
+                    min = diff;
+                    min1 = arr[i];
+                    min2 = arr[j];
+                }
             }
         }
     }
