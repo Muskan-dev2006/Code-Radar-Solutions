@@ -3,7 +3,7 @@
 #include <string.h>
 
 
-int shiftRight(int n) {
+int digitRightShift(int n) {
     char str[20];
     sprintf(str, "%d", n); 
     int len = strlen(str);
