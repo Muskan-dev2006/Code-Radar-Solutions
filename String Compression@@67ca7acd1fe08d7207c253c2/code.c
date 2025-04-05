@@ -5,6 +5,7 @@
 
 void compressString(char* str, char* compressed) {
     int len = strlen(str);
+    char temp[200];
     int i = 0, j = 0;
 
     while (i < len) {
@@ -16,17 +17,23 @@ void compressString(char* str, char* compressed) {
             i++;
         }
 
-        compressed[j++] = current;
+        temp[j++] = current;
 
-        char buffer[10];
-        sprintf(buffer, "%d", count);
-        for (int k = 0; buffer[k] != '\0'; k++) {
-            compressed[j++] = buffer[k];
+        if (count > 1) {
+            char buffer[10];
+            sprintf(buffer, "%d", count);
+            for (int k = 0; buffer[k] != '\0'; k++) {
+                temp[j++] = buffer[k];
+            }
         }
 
         i++;
     }
 
-    compressed[j] = '\0';
+    temp[j] = '\0';
+    if (strlen(temp) < len) {
+        strcpy(compressed, temp);
+    } else {
+        strcpy(compressed, str);
+    }
 }
-
