@@ -2,26 +2,30 @@
 #include <stdio.h>
 
 void deflateBalloons(int air[], int n) {
+    int remaining = n;
+
     while (1) {
         int min = 1e9;
         int count = 0;
 
-        // Count balloons with air and find the smallest non-zero air
+        // Find smallest non-zero air value
         for (int i = 0; i < n; i++) {
-            if (air[i] > 0) {
-                count++;
-                if (air[i] < min) {
-                    min = air[i];
-                }
+            if (air[i] > 0 && air[i] < min) {
+                min = air[i];
             }
         }
 
-        if (count == 0) break;
+        // If all are flat
+        if (min == 1e9) break;
 
-        // Print the count BEFORE deflating
+        // Count balloons that are still > 0
+        for (int i = 0; i < n; i++) {
+            if (air[i] > 0) count++;
+        }
+
         printf("%d\n", count);
 
-        // Deflate each balloon with air
+        // Subtract min from all non-zero balloons
         for (int i = 0; i < n; i++) {
             if (air[i] > 0) {
                 air[i] -= min;
