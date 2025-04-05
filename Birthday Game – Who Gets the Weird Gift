@@ -1,16 +1,6 @@
 // Your code here...
 #include <stdio.h>
-
-int main() {
-    int t;
-    scanf("%d", &t);
-
-    while (t--) {
-        int n, m, s;
-        scanf("%d %d %d", &n, &m, &s);
-        int prankFriend = findPrankReceiver(n, m, s);
-        printf("%d\n", prankFriend);
-    }
-
-    return 0;
+int findPrankReceiver(int n, int m, int s) {
+    return ((s - 1 + m - 1) % n) + 1;
 }
+
