@@ -26,11 +26,11 @@ int main(){
                 }
             }
         }
-    }
    if(min1>min2) {
         int temp = min1;
         min1 = min2;
         min2 = temp;
     }
     printf("%d %d",min1,min2);
+    }
 }
