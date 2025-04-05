@@ -15,7 +15,7 @@ int main(){
     if(n==1){
         printf("-1");
     }
-    else{
+    else if(n>1){
         for(int i=0; i<n;i++){
             for(int j=i+1; j<n;j++){
                 int diff = abs(arr[i]-arr[j]);
