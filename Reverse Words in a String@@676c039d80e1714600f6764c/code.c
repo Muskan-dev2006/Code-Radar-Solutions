@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-void reverse(char *str, int start, int end) {
+void reverseWord(char *str, int start, int end) {
     while (start < end) {
         char temp = str[start];
         str[start++] = str[end];
@@ -11,29 +11,31 @@ void reverse(char *str, int start, int end) {
     }
 }
 
-void reverseWords(char *str) {
-    int len = strlen(str);
+void compressString(char *input, char *output) {
+    int i = 0, j = 0;
+    int start;
 
-    reverse(str, 0, len - 1);
-    int start = 0, end;
-    for (int i = 0; i <= len; i++) {
-        if (str[i] == ' ' || str[i] == '\0') {
-            end = i - 1;
-            reverse(str, start, end);
-            start = i + 1;
-        }
+    while (input[i]) {
+        while (input[i] && isspace(input[i]))
+            output[j++] = input[i++];
+
+        start = j;
+        while (input[i] && !isspace(input[i]))
+            output[j++] = input[i++];
+        reverseWord(output, start, j - 1);
     }
+
+    output[j] = '\0';
 }
 
 int main() {
-    char str[200];
-
+    char str[100];        
+    char compressed[200]; 
     fgets(str, sizeof(str), stdin);
-
     str[strcspn(str, "\n")] = '\0';
 
-    reverseWords(str);
+    compressString(str, compressed);
+    printf("%s\n", compressed);
 
-    printf("%s\n", str);
     return 0;
 }
