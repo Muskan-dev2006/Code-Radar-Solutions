@@ -29,8 +29,7 @@ int main() {
     int freq;
     char result = mostFrequentChar(str, &freq);
 
-    printf("Most frequent character: %c\n", result);
-    printf("Frequency: %d\n", freq);
+    printf("%c\n", result)
 
     return 0;
 }
