@@ -10,9 +10,9 @@ int main() {
     substr[strcspn(substr, "\n")] = '\0';
 
     if (strstr(str, substr) != NULL) {
-        printf("Yes.\n");
+        printf("Yes\n");
     } else {
-        printf("No.\n");
+        printf("No\n");
     }
 
     return 0;
