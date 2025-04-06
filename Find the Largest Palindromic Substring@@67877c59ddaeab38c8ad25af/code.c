@@ -13,21 +13,23 @@ int main() {
     char str[1000];
     scanf("%s", str);
 
-    int start = 0, end = 0;
+    int start = 0, maxLen = 0;
     int len = strlen(str);
 
     for (int i = 0; i < len; i++) {
-        int len1 = expandFromCenter(str, i, i);    
+        int len1 = expandFromCenter(str, i, i);     
         int len2 = expandFromCenter(str, i, i + 1); 
-        int maxLen = (len1 > len2) ? len1 : len2;
+        int currLen = (len1 > len2) ? len1 : len2;
 
-        if (maxLen > end - start) {
-            start = i - (maxLen - 1) / 2;
-            end = i + maxLen / 2;
+        if (currLen > maxLen) {
+            maxLen = currLen;
+            start = i - (currLen - 1) / 2;
         }
     }
-    for (int i = start; i <= end; i++) {
-        printf("%c", str[i]);
+
+
+    for (int i = 0; i < maxLen; i++) {
+        printf("%c", str[start + i]);
     }
     printf("\n");
 
