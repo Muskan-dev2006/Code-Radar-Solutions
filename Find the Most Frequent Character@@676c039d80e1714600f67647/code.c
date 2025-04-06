@@ -1,9 +1,8 @@
-// Your code here...
 #include <stdio.h>
 #include <string.h>
 
 char mostFrequentChar(char *str, int *freqOut) {
-    int freq[256] = {0};  
+    int freq[256] = {0}; 
     int maxFreq = 0;
     char mostFreqChar;
 
@@ -11,7 +10,7 @@ char mostFrequentChar(char *str, int *freqOut) {
         unsigned char ch = str[i];
         if (ch != ' ') {  
             freq[ch]++;
-            if (freq[ch] > maxFreq) {
+            if (freq[ch] > maxFreq || (freq[ch] == maxFreq && ch < mostFreqChar)) {
                 maxFreq = freq[ch];
                 mostFreqChar = ch;
             }
