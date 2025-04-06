@@ -3,7 +3,6 @@
 
 int main() {
     char str[100];
-    printf("Enter a string: ");
     scanf("%s", str);
 
     int i = 0, isBinary = 1;
