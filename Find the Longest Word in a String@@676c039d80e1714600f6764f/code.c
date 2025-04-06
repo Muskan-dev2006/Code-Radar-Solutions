@@ -30,8 +30,6 @@ void findLongestWord(char *str, char *longestWord) {
 int main() {
     char str[200];
     char longestWord[100];
-
-    printf("Enter a string: ");
     fgets(str, sizeof(str), stdin);
 
 
@@ -39,7 +37,7 @@ int main() {
 
     findLongestWord(str, longestWord);
 
-    printf("Longest word: %s\n", longestWord);
+    printf("%s\n", longestWord);
 
     return 0;
 }
