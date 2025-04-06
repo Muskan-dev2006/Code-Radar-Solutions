@@ -1,17 +1,28 @@
 // Your code here...
 #include <stdio.h>
 #include <string.h>
-int main(){
-    char str[100];
-    scanf("%s",str);
-    int count = 0;
-    for(int i=0;i<strlen(str);i++ ){
-        for(int j=0;j<strlen(str);j++){
-            if(str[i]==str[j]){
-                count +=1;
-            }
-        }
-        printf("%c: %d\n",str[i],count);
-        count =0;
+
+#define MAX 256  // For all ASCII characters
+
+void findFrequency(char str[]) {
+    int freq[MAX] = {0};
+
+    // Count frequency of each character
+    for (int i = 0; str[i] != '\0'; i++) {
+        freq[(unsigned char)str[i]]++;
     }
+
+
+    for (int i = 0; i < MAX; i++) {
+        if (freq[i] > 0) {
+            printf("%c: %d\n", i, freq[i]);
+        }
+    }
+}
+
+int main() {
+    char str[1000];
+    scanf("%s", str);
+    findFrequency(str);
+    return 0;
 }
