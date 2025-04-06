@@ -24,7 +24,6 @@ void findFrequency(char str[]) {
 
 int main() {
     char str[1000];
-    printf("Enter a string: ");
     fgets(str, sizeof(str), stdin);
     findFrequency(str);
     return 0;
