@@ -1,17 +1,34 @@
 // Your code here...
 #include <stdio.h>
 #include <string.h>
-int main(){
-    char str[100];
-    fgets(str, sizeof(str), stdin);
-    scanf("%s",str);
-    int len = strlen(str);
-    int count = 1;
-    for(int i=0; i<len;i++){
-        if(str[i]==' '){
-            count +=1;
+#include <ctype.h>
+
+int countWords(char *str) {
+    int count = 0;
+    int inWord = 0;
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (!isspace(str[i])) {
+            if (!inWord) {
+                inWord = 1; 
+                count++;
+            }
+        } else {
+            inWord = 0; 
         }
     }
-    printf("%d",count);
 
+    return count;
+}
+
+int main() {
+    char str[200];
+    fgets(str, sizeof(str), stdin);
+
+    str[strcspn(str, "\n")] = '\0';
+
+    int words = countWords(str);
+    printf("%d\n", words);
+
+    return 0;
 }
