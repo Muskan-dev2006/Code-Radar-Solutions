@@ -1,36 +1,36 @@
 // Your code here...
 #include <stdio.h>
 
-void deflateBalloons(int air[], int n) {
-    int remaining = n;
-
-    while (1) {
-        int min = 1e9;
-        int count = 0;
-
-        // Find smallest non-zero air value
-        for (int i = 0; i < n; i++) {
-            if (air[i] > 0 && air[i] < min) {
-                min = air[i];
-            }
-        }
-
-        // If all are flat
-        if (min == 1e9) break;
-
-        // Count balloons that are still > 0
-        for (int i = 0; i < n; i++) {
-            if (air[i] > 0) count++;
-        }
-
-        printf("%d\n", count);
-
-        // Subtract min from all non-zero balloons
-        for (int i = 0; i < n; i++) {
-            if (air[i] > 0) {
-                air[i] -= min;
+void sort(int arr[], int n) {
+    for (int i = 0; i < n-1; i++) {
+        for (int j = i+1; j < n; j++) {
+            if (arr[i] > arr[j]) {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
             }
         }
     }
 }
 
+int main() {
+    int n;
+    scanf("%d", &n);
+    int a[1000];
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    sort(a, n); 
+
+    int prev = 0;
+    for (int i = 0; i < n; i++) {
+        if (a[i] > prev) {
+            printf("%d\n", n - i);
+            prev = a[i];
+        }
+    }
+
+    return 0;
+}
