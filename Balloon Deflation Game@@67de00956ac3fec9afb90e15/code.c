@@ -1,8 +1,10 @@
 // Your code here...
 void deflateBalloons(int air[], int n) {
-    while (1) {
+    int done = 0;
+
+    while (done < n) {
+        int min = 10001;
         int count = 0;
-        int min = 10001; 
 
         for (int i = 0; i < n; i++) {
             if (air[i] > 0) {
@@ -14,12 +16,14 @@ void deflateBalloons(int air[], int n) {
 
         if (count == 0)
             break;
-
         printf("%d\n", count);
 
         for (int i = 0; i < n; i++) {
-            if (air[i] > 0)
+            if (air[i] > 0) {
                 air[i] -= min;
+                if (air[i] == 0)
+                    done++;
+            }
         }
     }
 }
